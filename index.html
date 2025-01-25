@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Buat Website Dan Upload Dengan Gratis Menggunakan JPWWEBS"
+    />
+    <meta name="author" content="JPW" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="jpw,webs,web,upload,website,gratis,free" />
+    <meta
+      property="og:title"
+      content="JPWWEBS | Buat Website Dan Upload Dengan Gratis Menggunakan JPWWEBS"
+    />
+    <meta
+      property="og:description"
+      content="Buat Website Dan Upload Dengan Gratis Menggunakan JPWWEBS"
+    />
+    <meta
+      property="og:image"
+      content="https://jproject-1.github.io/jpwwebs/logo.png"
+    />
+    <meta property="og:url" content="https://jproject-1.github.io/jpwwebs/" />
+    <title>JPW WEBS</title>
+    <link rel="icon" href="logo.png" />
+    <link rel="apple-touch-icon" href="logo.png" />
+    <link rel="stylesheet" href="style.css" crossorigin="anonymous" />
+    <link rel="canonical" />
+  </head>
+  <body>
+    <h1>JPW WEBS</h1>
+
+    <div class="search-container">
+      <input
+        type="text"
+        id="search-box"
+        placeholder="Search..."
+        autocomplete="off"
+      />
+      <span class="search-icon" onclick="triggerSearch()">🔍</span>
+      <div id="autocomplete-list" class="autocomplete-list"></div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script>
+      // Konfigurasi Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyBObRdkHLdqjQqSTXvT24QipHBkxaFw-pk",
+        authDomain: "webs-a0beb.firebaseapp.com",
+        databaseURL: "https://webs-a0beb-default-rtdb.firebaseio.com",
+        projectId: "webs-a0beb",
+        storageBucket: "webs-a0beb.firebasestorage.app",
+        messagingSenderId: "853087186959",
+        appId: "1:853087186959:web:c02748666c875f3e83f37a",
+        measurementId: "G-4CVGCK8NS4",
+      };
+
+      // Inisialisasi Firebase
+      const app = firebase.initializeApp(firebaseConfig);
+      const database = firebase.database(app);
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

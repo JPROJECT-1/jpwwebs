@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Buat Website Dan Upload Dengan Gratis Menggunakan JPWWEBS"
+    />
+    <meta name="author" content="JPW" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="jpw,webs,web,upload,website,gratis,free" />
+    <meta
+      property="og:title"
+      content="JPWWEBS | Buat Website Dan Upload Dengan Gratis Menggunakan JPWWEBS"
+    />
+    <meta
+      property="og:description"
+      content="Buat Website Dan Upload Dengan Gratis Menggunakan JPWWEBS"
+    />
+    <meta
+      property="og:image"
+      content="https://jproject-1.github.io/jpwwebs/logo.png"
+    />
+    <meta property="og:url" content="https://jproject-1.github.io/jpwwebs/" />
+    <title>JPW WEBS | ADMIN</title>
+    <link rel="icon" href="../logo.png" />
+    <link rel="apple-touch-icon" href="../logo.png" />
+    <link rel="stylesheet" href="style.css" crossorigin="anonymous" />
+    <link rel="canonical" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="jdl">Tambah Data</h1>
+      <div>
+        <div class="form-group">
+          <label for="webName">Nama Web:</label>
+          <input type="text" id="webName" placeholder="Masukkan nama web" />
+          <select id="domain">
+            <option value=".jpw">.jpw</option>
+            <option value=".test">.test</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="webContent">Isi Web:</label>
+          <textarea
+            id="webContent"
+            rows="5"
+            placeholder="Masukkan HTML"
+          ></textarea>
+        </div>
+        <button id="addDataBtn">Tambah Data</button>
+      </div>
+    </div>
+    <div class="container">
+      <h1>List Data</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Nama Web</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="dataTable"></tbody>
+      </table>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script>
+      // Konfigurasi Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyBObRdkHLdqjQqSTXvT24QipHBkxaFw-pk",
+        authDomain: "webs-a0beb.firebaseapp.com",
+        databaseURL: "https://webs-a0beb-default-rtdb.firebaseio.com",
+        projectId: "webs-a0beb",
+        storageBucket: "webs-a0beb.firebasestorage.app",
+        messagingSenderId: "853087186959",
+        appId: "1:853087186959:web:c02748666c875f3e83f37a",
+        measurementId: "G-4CVGCK8NS4",
+      };
+
+      // Inisialisasi Firebase
+      const app = firebase.initializeApp(firebaseConfig);
+      const database = firebase.database();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
