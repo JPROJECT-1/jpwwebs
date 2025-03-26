@@ -3,8 +3,17 @@ let firebaseData = [];
 
 // Fungsi untuk mengambil data dari Firebase
 async function fetchDataFromFirebase() {
+  // const snapshot = await firebase.database().ref("data").once("value");
+  // firebaseData = snapshot.val() || [];
+
   const snapshot = await firebase.database().ref("data").once("value");
-  firebaseData = snapshot.val() || [];
+  const data = snapshot.val();
+
+  if (data) {
+    firebaseData = Object.values(data); // Ubah objek menjadi array tanpa slot kosong
+  } else {
+    firebaseData = [];
+  }
 }
 
 // Panggil fungsi untuk mengambil data
